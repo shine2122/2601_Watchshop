@@ -99,26 +99,17 @@ body {
     justify-content: center;
 }
 
-.watch-placeholder {
-    width: 400px;
-    height: 400px;
-    background: linear-gradient(135deg, #3a3a3a 0%, #1a1a1a 100%);
-    border-radius: 50%;
-    position: relative;
-    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+.hero-watch {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    object-fit: contain;
+    filter: drop-shadow(0 20px 60px rgba(0, 0, 0, 0.5));
+    transition: transform 0.3s ease;
 }
 
-.watch-placeholder::before {
-    content: '';
-    position: absolute;
-    width: 150px;
-    height: 200px;
-    background: linear-gradient(135deg, #c9a961 0%, #8b7355 100%);
-    border-radius: 20px;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    box-shadow: 0 10px 40px rgba(201, 169, 97, 0.3);
+.hero-watch:hover {
+    transform: scale(1.05);
 }
 
 .hero-text {
@@ -202,8 +193,8 @@ body {
 /* Featured Story */
 .featured-story {
     height: 500px;
-    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
-                url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 500"><rect fill="%23654321" width="1200" height="500"/></svg>');
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+                url('images/story/featured-bg.jpg');
     background-size: cover;
     background-position: center;
     display: flex;
@@ -271,6 +262,22 @@ body {
 
 .heritage {
     background-color: #1a1a1a;
+    position: relative;
+    overflow: hidden;
+}
+
+.heritage-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+}
+
+.heritage-image:hover {
+    opacity: 1;
 }
 
 .craftsmanship {
@@ -379,23 +386,15 @@ body {
 .product-image {
     width: 100%;
     height: 300px;
-    background: linear-gradient(135deg, #2a2a2a 0%, #1a1a1a 100%);
+    object-fit: cover;
     margin-bottom: 20px;
     border-radius: 5px;
-    position: relative;
+    background-color: #2a2a2a;
+    transition: transform 0.3s ease;
 }
 
-.product-image::after {
-    content: '';
-    position: absolute;
-    width: 80px;
-    height: 80px;
-    background: linear-gradient(135deg, #c9a961 0%, #8b7355 100%);
-    border-radius: 50%;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    box-shadow: 0 5px 20px rgba(201, 169, 97, 0.3);
+.product-card:hover .product-image {
+    transform: scale(1.05);
 }
 
 .product-category {
